@@ -1,0 +1,54 @@
+
+> braveheart-crm-os@0.0.0 build
+> vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs
+
+vite v5.4.21 building for production...
+transforming...
+
+warn - The class `duration-[10s]` is ambiguous and matches multiple utilities.
+warn - If this is content and not a class, replace it with `duration-&lsqb;10s&rsqb;` to silence this warning.
+
+warn - The class `ease-[cubic-bezier(0.16,1,0.3,1)]` is ambiguous and matches multiple utilities.
+warn - If this is content and not a class, replace it with `ease-&lsqb;cubic-bezier(0.16,1,0.3,1)&rsqb;` to silence this warning.
+
+warn - The class `ease-[cubic-bezier(0.25,1,0.5,1)]` is ambiguous and matches multiple utilities.
+warn - If this is content and not a class, replace it with `ease-&lsqb;cubic-bezier(0.25,1,0.5,1)&rsqb;` to silence this warning.
+✓ 3032 modules transformed.
+rendering chunks...
+[plugin:vite:reporter] [plugin vite:reporter] 
+(!) /app/applet/views/utils/formatters.ts is dynamically imported by /app/applet/components/forms/enrollment/hooks/useEnrollment.ts but also statically imported by /app/applet/components/forms/enrollment/hooks/useEnrollment.ts, dynamic import will not move module into another chunk.
+
+[plugin:vite:reporter] [plugin vite:reporter] 
+(!) /app/applet/lib/protocolService.ts is dynamically imported by /app/applet/hooks/crm/useCrmSales.ts, /app/applet/hooks/crm/useCrmSales.ts but also statically imported by /app/applet/components/agent/hooks/useAgentPortalLogic.ts, dynamic import will not move module into another chunk.
+
+[plugin:vite:reporter] [plugin vite:reporter] 
+(!) /app/applet/lib/realtimeClient.ts is dynamically imported by /app/applet/components/leads/LeadDetail.tsx, /app/applet/components/leads/LeadDetail.tsx, /app/applet/components/leads/LeadDetail.tsx, /app/applet/components/leads/LeadDetail.tsx, /app/applet/hooks/useAppInitialization.ts, /app/applet/hooks/useCRMData.ts, /app/applet/hooks/useCRMData.ts, /app/applet/nexus/repositories/BaseRepository.ts but also statically imported by /app/applet/components/agent/AgentViewManager.tsx, /app/applet/components/agent/hooks/useAgentPortalLogic.ts, /app/applet/nexus/services/NexusEventBus.ts, dynamic import will not move module into another chunk.
+
+[plugin:vite:reporter] [plugin vite:reporter] 
+(!) /app/applet/services/ChatService.ts is dynamically imported by /app/applet/components/forms/enrollment/hooks/useEnrollment.ts but also statically imported by /app/applet/components/chat/ChatList.tsx, /app/applet/components/chat/hooks/useMessagingLogic.ts, /app/applet/hooks/useChat.ts, dynamic import will not move module into another chunk.
+
+[plugin:vite:reporter] [plugin vite:reporter] 
+(!) /app/applet/nexus/services/NexusEventBus.ts is dynamically imported by /app/applet/context/CRMPerformanceContext.tsx, /app/applet/hooks/crm/useCrmSales.ts, /app/applet/hooks/crm/useCrmSales.ts, /app/applet/hooks/useWorkTimer.ts but also statically imported by /app/applet/context/providers/AgentPerformanceProvider.tsx, dynamic import will not move module into another chunk.
+
+computing gzip size...
+dist/index.html                            2.71 kB │ gzip:   1.00 kB
+dist/assets/index-CXQTnqj0.css           244.25 kB │ gzip:  32.57 kB
+dist/assets/crmUtils-fRjWO_PC.js           0.17 kB │ gzip:   0.16 kB
+dist/assets/crmLogic-GXR0S-UE.js           0.59 kB │ gzip:   0.41 kB
+dist/assets/sheetExport-BJaIJSDd.js        2.05 kB │ gzip:   1.14 kB
+dist/assets/vendor-icons-B9EZNeWV.js      80.12 kB │ gzip:  14.16 kB
+dist/assets/vendor-Cy4MUonl.js           328.01 kB │ gzip: 109.55 kB
+dist/assets/vendor-react-CJxSFyX-.js     340.28 kB │ gzip: 104.02 kB
+dist/assets/vendor-charts-1ZFX5q8G.js    373.98 kB │ gzip:  91.49 kB
+dist/assets/index-CUXRtk01.js          2,368.71 kB │ gzip: 391.72 kB
+
+(!) Some chunks are larger than 1000 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 22.37s
+
+  dist/server.cjs      177.1kb
+  dist/server.cjs.map  315.4kb
+
+⚡ Done in 38ms

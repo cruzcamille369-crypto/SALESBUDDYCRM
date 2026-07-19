@@ -1,0 +1,63 @@
+import React, { useState, useRef, useEffect } from 'react';
+import { ChevronDown } from 'lucide-react';
+
+export const InputField = ({ label, icon: Icon, error, ...props }: any) => (
+    <div className="space-y-1.5 w-full">
+        <label className="text-[13px] font-semibold text-text-muted px-1 flex justify-between items-center tracking-wide">
+            {typeof label === 'string' ? label.split('').join('\u200B') : label} 
+            {error && <span className="text-emerald-500 text-sm uppercase font-bold tracking-wider bg-emerald-500/10 px-2 rounded-full py-0.5">{error}</span>}
+        </label>
+        <div className="relative">
+            <input 
+                {...props}
+                autoComplete="chrome-off"
+                data-lpignore="true"
+                data-1p-ignore="true"
+                data-form-type="other"
+                className={`w-full bg-surface-main border border-border-strong rounded-xl px-3.5 py-2.5 text-sm font-medium text-text-primary placeholder-[#A0A0A0]/40 outline-none transition-all focus:border-indigo-600 focus:ring-1 focus:ring-accent-primary/20 shadow-sm ${Icon ? 'pl-[40px]' : ''} ${props.className || ''}`}
+            />
+            {Icon && <Icon className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-muted/60" size={18} />}
+        </div>
+    </div>
+);
+
+export function CustomSelect({ value, onChange, options, placeholder, name, tabIndex }: any) {
+    const [open, setOpen] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClick = (e: any) => {
+            if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+        };
+        document.addEventListener('mousedown', handleClick);
+        return () => document.removeEventListener('mousedown', handleClick);
+    }, []);
+
+    return (
+        <div className="relative w-full" ref={ref}>
+            <button
+                type="button"
+                tabIndex={tabIndex}
+                onClick={() => setOpen(!open)}
+                className={`w-full bg-surface-main border ${open ? 'border-indigo-600 ring-1 ring-accent-primary/20' : 'border-border-strong'} rounded-xl px-3.5 py-2.5 text-left text-sm font-medium text-text-primary outline-none transition-all flex items-center justify-between shadow-sm`}
+            >
+                {value ? options.find((o:any)=>o.value===value)?.label || value : <span className="text-text-muted/30">{placeholder}</span>}
+                <ChevronDown size={18} className={`text-text-muted/60 transition-transform ${open ? 'rotate-180' : ''}`} />
+            </button>
+            {open && (
+                <div className="absolute z-50 mt-2 w-full bg-surface-main border border-border-strong rounded-2xl shadow-xl py-2 max-h-60 overflow-y-auto custom-scrollbar">
+                    {options.map((opt:any) => (
+                        <button
+                            key={opt.value}
+                            type="button"
+                            onClick={() => { onChange({ target: { name, value: opt.value }}); setOpen(false); }}
+                            className="w-full text-left px-4 py-2 text-sm font-medium text-text-primary hover:bg-surface-alt/50 transition-colors"
+                        >
+                            {opt.label}
+                        </button>
+                    ))}
+                </div>
+            )}
+        </div>
+    );
+}

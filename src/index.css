@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+    /* Premium Modern Light Mode - Pearl & Slate */
+    --color-surface-canvas: 220 14% 96%; /* Cool Alabaster Canvas */
+    --color-surface-widget: 0 0% 100%; /* Pure white widgets */
+    --color-surface-main: 0 0% 100%; /* Pure white panels */
+    --color-surface-alt: 210 30% 97%; /* Very soft recess for inputs/hovers */
+    --color-surface-highlight: 210 30% 95%; /* Action highlight */
+    
+    --color-accent-primary: 250 85% 60%; /* Vibrant fun purple */
+    --color-accent-secondary: 330 80% 60%; /* Fun pink */
+    
+    --color-text-primary: 0 0% 0%; /* Pure Black */
+    --color-text-secondary: 215 14% 34%; /* Sophisticated Grey */
+    --color-text-muted: 215 14% 45%; /* Gentle Muted Text */
+    
+    --color-border-subtle: 214 32% 91%; /* Extremely crisp light borders */
+    --color-border-strong: 214 32% 82%; /* Stronger definition */
+
+    /* Standardized SaaS Status Colors */
+    --color-status-success: 150 70% 40%;
+    --color-status-warning: 35 90% 50%;
+    --color-status-error: 350 80% 55%;
+    --color-status-info: 210 100% 50%;
+
+    /* Generic component overrides */
+    --color-blue-500: var(--color-status-info);
+    --color-emerald-400: 150 60% 45%;
+    --color-emerald-500: var(--color-status-success);
+    --color-emerald-600: 150 60% 32%;
+    --color-amber-400: 35 90% 55%;
+    --color-amber-500: var(--color-status-warning);
+    --color-red-400: 350 80% 60%;
+    --color-red-500: var(--color-status-error);
+    --color-indigo-500: var(--color-accent-secondary);
+
+    /* Premium Elevation Shadows */
+    --shadow-panel: 0 4px 20px -2px rgba(0,0,0,0.03), 0 0 0 1px rgba(0,0,0,0.02);
+    --shadow-float: 0 16px 40px -4px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.02);
+
+    /* Dynamic theme custom overrides fallbacks - Light Mode */
+    --sidebar-accent: hsl(var(--color-accent-primary));
+    --sidebar-border: hsl(var(--color-border-subtle));
+    --sidebar-bg: hsl(var(--color-surface-widget));
+    --sidebar-text: hsl(var(--color-text-primary));
+    --sidebar-text-muted: hsl(var(--color-text-muted));
+
+    --header-accent: hsl(var(--color-accent-secondary));
+    --header-border: hsl(var(--color-border-subtle));
+    --header-bg: hsl(var(--color-surface-main));
+    --header-text: hsl(var(--color-text-primary));
+  }
+
+  html.dark, .dark {
+    /* Premium Modern Dark Mode - Dark Violet */
+    --color-surface-canvas: 265 45% 6%; /* Deep dark violet canvas */
+    --color-surface-widget: 265 25% 9%; /* Violet charcoal for widgets */
+    --color-surface-main: 265 25% 12%; /* Primary cards and panels */
+    --color-surface-alt: 265 25% 16%; /* Hover/Input recess */
+    --color-surface-highlight: 265 50% 20%;
+    
+    --color-accent-primary: 250 85% 70%;
+    --color-accent-secondary: 330 80% 70%;
+    
+    --color-text-primary: 0 0% 100%; /* Pure White */
+    --color-text-secondary: 218 14% 83%; /* Soft Silver */
+    --color-text-muted: 218 11% 65%; /* Dimmed Silver */
+    
+    --color-border-subtle: 265 20% 18%; /* Subtle dark borders */
+    --color-border-strong: 265 20% 28%;
+    
+    /* Standardized SaaS Status Colors */
+    --color-status-success: 150 70% 45%; 
+    --color-status-warning: 35 90% 55%; 
+    --color-status-error: 350 80% 60%; 
+    --color-status-info: 210 100% 60%; 
+
+    /* Generic component overrides */
+    --color-blue-500: var(--color-status-info);
+    --color-emerald-400: 150 60% 50%;
+    --color-emerald-500: var(--color-status-success);
+    --color-emerald-600: 150 60% 40%;
+    --color-amber-400: 35 90% 60%;
+    --color-amber-500: var(--color-status-warning);
+    --color-red-400: 350 80% 65%;
+    --color-red-500: var(--color-status-error);
+    --color-indigo-500: var(--color-accent-secondary);
+
+    /* Premium Dark Elevation Shadows */
+    --shadow-panel: 0 8px 30px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.03);
+    --shadow-float: 0 24px 50px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.05);
+
+    /* Dynamic theme custom overrides fallbacks - Dark Mode */
+    --sidebar-accent: hsl(var(--color-accent-primary));
+    --sidebar-border: hsl(var(--color-border-subtle));
+    --sidebar-bg: hsl(var(--color-surface-widget));
+    --sidebar-text: hsl(var(--color-text-primary));
+    --sidebar-text-muted: hsl(var(--color-text-muted));
+
+    --header-accent: hsl(var(--color-accent-secondary));
+    --header-border: hsl(var(--color-border-subtle));
+    --header-bg: hsl(var(--color-surface-main));
+    --header-text: hsl(var(--color-text-primary));
+  }
+
+  html {
+    @apply antialiased h-full overflow-hidden font-medium leading-loose tracking-wide;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-surface-canvas text-text-primary text-[14px] font-medium font-sans h-full overflow-hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  /* Allow selection in specific input fields only */
+  input, textarea {
+    user-select: text !important;
+    -webkit-user-select: text !important;
+  }
+
+  #root {
+    @apply h-full w-full;
+  }
+
+  ::selection {
+    @apply bg-accent-primary/30 text-white;
+  }
+
+  h1 {
+    @apply text-xl sm:text-2xl font-display tracking-tight font-bold text-text-primary;
+  }
+  h2, h3, h4, h5, h6 {
+    @apply text-base font-display tracking-tight font-semibold text-text-primary;
+  }
+}
+
+@layer components {
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply w-1.5 h-1.5;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-border-strong/40 rounded hover:bg-border-strong/80 transition-colors;
+  }
+
+  /* Enhanced Thicker Scrollbar for Ledger / Wide Tables */
+  .ledger-scrollbar::-webkit-scrollbar {
+    @apply w-3 h-5;
+  }
+  .ledger-scrollbar::-webkit-scrollbar-track {
+    @apply bg-surface-alt/50 border-t border-border-subtle/50;
+  }
+  .ledger-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-border-strong/80 rounded-full hover:bg-accent-primary transition-colors border-4 border-transparent bg-clip-padding cursor-pointer shadow-sm;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .glass-panel {
+    @apply bg-surface-main shadow-panel rounded-xl border border-border-subtle;
+  }
+
+  .tech-grid {
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+@layer utilities {
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; filter: brightness(1); }
+    50% { opacity: 0.8; filter: brightness(1.2); }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+
+}
+
+
+/* React DatePicker Modern UI Overrides */
+.custom-datepicker-wrapper .react-datepicker-wrapper {
+  width: 100%;
+}
+.react-datepicker {
+  background-color: hsl(var(--color-surface-main)) !important;
+  border: 1px solid hsl(var(--color-border-subtle)) !important;
+  border-radius: 16px !important;
+  box-shadow: var(--shadow-float) !important;
+  font-family: inherit !important;
+  color: hsl(var(--color-text-primary)) !important;
+  overflow: hidden;
+}
+.react-datepicker__header {
+  background-color: hsl(var(--color-surface-alt)) !important;
+  border-bottom: 1px solid hsl(var(--color-border-subtle)) !important;
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+  padding-top: 12px !important;
+}
+.react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header {
+  color: hsl(var(--color-text-primary)) !important;
+  font-weight: 600 !important;
+}
+.react-datepicker__day-name, .react-datepicker__day {
+  color: hsl(var(--color-text-primary)) !important;
+}
+.react-datepicker__day-name {
+  color: hsl(var(--color-text-secondary)) !important;
+}
+.react-datepicker__day:hover {
+  background-color: hsl(var(--color-surface-highlight)) !important;
+}
+.react-datepicker__day--selected, .react-datepicker__day--keyboard-selected {
+  background-color: hsl(var(--color-emerald-500)) !important;
+  color: white !important;
+  font-weight: bold;
+}
+.react-datepicker__month-select, .react-datepicker__year-select {
+  background-color: hsl(var(--color-surface-main)) !important;
+  color: hsl(var(--color-text-primary)) !important;
+  border: 1px solid hsl(var(--color-border-subtle)) !important;
+  border-radius: 8px !important;
+  padding: 4px 8px !important;
+  outline: none !important;
+}
+.react-datepicker-popper[data-placement^='bottom'] .react-datepicker__triangle::before,
+.react-datepicker-popper[data-placement^='bottom'] .react-datepicker__triangle::after {
+  border-bottom-color: hsl(var(--color-surface-alt)) !important;
+}
+.react-datepicker-popper[data-placement^='top'] .react-datepicker__triangle::before,
+.react-datepicker-popper[data-placement^='top'] .react-datepicker__triangle::after {
+  border-top-color: hsl(var(--color-surface-main)) !important;
+}
+
+
+/* Custom Curve Hierarchy */
+@layer components {
+  /* Major layout structures, cards, and panels get the premium high-curvature 24px */
+  .rounded-2xl, .rounded-3xl {
+    border-radius: 24px !important;
+  }
+  /* Standard items: inputs, primary buttons, major forms get 14px */
+  .rounded-xl {
+    border-radius: 14px !important;
+  }
+  /* Intermediate items get 10px */
+  .rounded-lg {
+    border-radius: 10px !important;
+  }
+  /* Small components: badges, tags, controls, tooltips, checkboxes get 6px */
+  .rounded-md {
+    border-radius: 6px !important;
+  }
+  button, .btn {
+    @apply transition-all active:scale-95 font-bold tracking-wide hover:brightness-110;
+  }
+}
+
+
+/* Theme Bridge Layer - Auto-unifies static classes with active palette variables */
+@layer utilities {
+  /* Surface backgrounds */
+  .bg-white {
+    background-color: hsl(var(--color-surface-main)) !important;
+  }
+  .bg-slate-50 {
+    background-color: hsl(var(--color-surface-canvas)) !important;
+  }
+  .bg-slate-100 {
+    background-color: hsl(var(--color-surface-alt)) !important;
+  }
+  .bg-slate-200 {
+    background-color: hsl(var(--color-surface-highlight)) !important;
+  }
+
+  /* Borders */
+  .border-slate-200, .border-slate-300 {
+    border-color: hsl(var(--color-border-subtle)) !important;
+  }
+  .border-slate-100 {
+    border-color: hsl(var(--color-border-subtle)) !important;
+  }
+  .border-slate-400 {
+    border-color: hsl(var(--color-border-strong)) !important;
+  }
+
+  /* Typography */
+  .text-slate-900, .text-slate-800 {
+    color: hsl(var(--color-text-primary)) !important;
+  }
+  .text-slate-700, .text-slate-600 {
+    color: hsl(var(--color-text-secondary)) !important;
+  }
+  .text-slate-500, .text-slate-400 {
+    color: hsl(var(--color-text-muted)) !important;
+  }
+
+  .font-mono {
+    /* Kept as mono */
+  }
+  .text-emerald-400, .text-emerald-500 {
+    /* Kept as emerald for terminal contrast */
+  }
+    .bg-black\/30, .bg-black\/40, .bg-black\/90 {
+        /* Allowed to stay dark for terminal contrast */
+    }
+}
+
+
+/* Soften standard inputs */
+@layer components {
+  input, textarea, select {
+    @apply rounded-xl bg-surface-alt border-border-subtle focus:ring-4 focus:ring-accent-primary/20 focus:border-accent-primary focus:bg-surface-main transition-all;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
+  }
+  
+  .dark input, .dark textarea, .dark select {
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+  }
+  .glass-panel { @apply shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)] border-border-subtle bg-surface-main; }
+  /* Fun hover states */
+  button:hover {
+    @apply shadow-lg -translate-y-0.5;
+  }
+}
+
+
+
+
+
+/* Soften standard panels */
+@layer components {
+  
+  /* Dashboard adjustments */
+  .shadow-panel {
+    @apply shadow-[0_4px_24px_rgba(0,0,0,0.03)];
+  }
+}
+
+
+
+
+/* Custom robust styles for sidebar theme elements to bypass hex-opacity limitations */
+.sidebar-tab-trigger-active {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  border-left: 3px solid #2D6AFF !important;
+  border-radius: 0 !important;
+  color: #0F1D35 !important;
+}
+
+.sidebar-tab-trigger-inactive {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #6B7A99 !important;
+}
+
+
+.sidebar-tab-trigger-inactive {
+  color: var(--sidebar-text-muted) !important;
+  border-color: transparent !important;
+  background-color: transparent !important;
+}
+
+.sidebar-tab-trigger-inactive:hover {
+  background-color: color-mix(in srgb, hsl(var(--color-text-primary)) 6%, transparent) !important;
+  border-color: color-mix(in srgb, var(--sidebar-border) 40%, transparent) !important;
+  color: var(--sidebar-text) !important;
+}
+
+.horizontal-tab-trigger-active {
+  border-bottom-color: hsl(var(--color-text-primary)) !important;
+  color: hsl(var(--color-text-primary)) !important;
+  background-color: color-mix(in srgb, hsl(var(--color-text-primary)) 6%, transparent) !important;
+}
+
+
+.sidebar-tab-trigger-inactive:hover {
+  background-color: #F4F6FA !important;
+}

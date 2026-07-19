@@ -1,0 +1,109 @@
+
+import React from 'react';
+import { Search, Hash, Users, ShieldAlert } from 'lucide-react';
+import { ChatChannel, User } from '../../types';
+import { sfx } from '../../lib/soundService';
+
+const getDmChannelId = (userId1: string, userId2: string) => {
+    return [userId1, userId2].sort().join('_');
+};
+
+interface ChatSidebarProps {
+    currentUser: User;
+    activeChannelId: string;
+    searchQuery: string;
+    setSearchQuery: (q: string) => void;
+    filteredChannels: { publicChans: ChatChannel[], dmChans: User[] };
+    setActiveChannelId: (id: string) => void;
+    setMobileView: (v: 'list' | 'chat') => void;
+    mobileView: 'list' | 'chat';
+}
+
+export const ChatSidebar: React.FC<ChatSidebarProps> = ({ 
+    currentUser, activeChannelId, searchQuery, setSearchQuery, 
+    filteredChannels, setActiveChannelId, setMobileView, mobileView 
+}) => {
+    
+    // Ensure DM channels only show users from the same server (already handled by filteredChannels via parent, 
+    // but explicit filtering here adds depth for display safety)
+    const safeDmChannels = filteredChannels.dmChans.filter(u => u.serverId === currentUser.serverId);
+
+    return (
+        <div className={`flex-col bg-surface-alt border-r border-border-subtle shrink-0 transition-all ${mobileView === 'list' ? 'flex w-full' : 'hidden md:flex w-64'}`}>
+            <div className="p-5 pb-4 flex items-center justify-between">
+                <h2 className="text-lg font-medium tracking-tighter  italic text-text-primary">Messages</h2>
+            </div>
+            <div className="px-4 pb-4">
+                <div className="relative group">
+                    <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted group-focus-within:text-indigo-600 transition-colors"/>
+                    <input autoComplete="off" data-lpignore="true" data-prevent-autofill="true" spellCheck={false} 
+                        className="w-full bg-surface-main border border-border-subtle rounded-xl py-3 pl-10 pr-4 text-sm font-bold outline-none focus:border-indigo-600 focus:shadow-lg transition-all" 
+                        placeholder="Search..." 
+                        value={searchQuery} 
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                </div>
+            </div>
+            <div className="flex-1 overflow-y-auto px-4 space-y-1 custom-scrollbar">
+                <div className="px-4 py-2">
+                    <p className="text-sm font-bold text-text-muted  tracking-[0.3em]">Channels</p>
+                </div>
+                {filteredChannels.publicChans.map(c => (
+                    <button 
+                        key={c.id} 
+                        onClick={() => { setActiveChannelId(c.id); setMobileView('chat'); sfx.playClick(); }} 
+                        className={`w-full flex items-center gap-3 p-4 rounded-xl transition-all group ${activeChannelId === c.id ? 'bg-surface-main border border-border-subtle shadow-md' : 'hover:bg-surface-main/40 border border-transparent'}`}
+                    >
+                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all ${activeChannelId === c.id ? 'bg-indigo-600 text-white shadow-lg shadow-accent-primary/20' : 'bg-surface-main border border-border-subtle text-text-muted group-hover:text-indigo-600'}`}>
+                            {c.type === 'group' ? <Users size={20}/> : c.type === 'private' ? <ShieldAlert size={20}/> : <Hash size={20}/>}
+                        </div>
+                        <div className="text-left flex-1 truncate">
+                            <p className={`text-sm font-medium  tracking-tight transition-colors ${activeChannelId === c.id ? 'text-text-primary' : 'text-text-secondary group-hover:text-text-primary'}`}>{c.name}</p>
+                            <p className="text-sm font-bold text-text-muted  tracking-wide mt-0.5">Active</p>
+                        </div>
+                        {/* Added unreadCount check which is now supported by updated ChatChannel interface */}
+                        {c.unreadCount ? <div className="w-2 h-2 rounded-full bg-indigo-600 shadow-sm animate-pulse"></div> : null}
+                    </button>
+                ))}
+                
+                <div className="px-4 py-2 mt-6">
+                    <p className="text-sm font-bold text-text-muted  tracking-[0.3em]">Direct Messages</p>
+                </div>
+                {safeDmChannels.map(u => {
+                    const dmId = getDmChannelId(currentUser.id, u.id);
+                    return (
+                        <button 
+                            key={u.id} 
+                            onClick={() => { setActiveChannelId(dmId); setMobileView('chat'); sfx.playClick(); }} 
+                            className={`w-full flex items-center gap-3 p-4 rounded-xl transition-all group ${activeChannelId === dmId ? 'bg-surface-main border border-border-subtle shadow-md' : 'hover:bg-surface-main/40 border border-transparent'}`}
+                        >
+                            <div className="w-10 h-10 rounded-xl overflow-hidden bg-surface-main border border-border-subtle relative group-hover:scale-105 transition-transform shadow-sm">
+                                {u.avatar ? <img src={u.avatar} className="w-full h-full object-cover" /> : <div className="w-full h-full flex items-center justify-center font-medium text-sm bg-surface-alt text-indigo-600">{u.name.charAt(0)}</div>}
+                                <div className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-surface-main ${ 
+                                    u.currentStatus === 'online' ? 'bg-emerald-500' : 
+                                    u.currentStatus === 'break' ? 'bg-amber-500' : 
+                                    'bg-slate-300'
+                                }`}></div>
+                            </div>
+                            <div className="text-left flex-1 truncate">
+                                <p className={`text-sm font-medium tracking-tight transition-colors ${activeChannelId === dmId ? 'text-text-primary' : 'text-text-secondary group-hover:text-text-primary'}`}>{u.name}</p>
+                                <p className="text-sm font-bold text-text-muted  tracking-wide mt-0.5">Status: {u.currentStatus || 'Offline'}</p>
+                            </div>
+                        </button>
+                    );
+                })}
+            </div>
+            <div className="p-4 border-t border-border-subtle bg-surface-alt/50">
+                 <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl overflow-hidden border-2 border-indigo-600 shadow-lg ring-4 ring-accent-primary/5">
+                        <img src={currentUser.avatar} className="w-full h-full object-cover" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium text-text-primary  tracking-tight truncate">{currentUser.name}</p>
+                        <p className="text-sm font-bold text-indigo-600  tracking-wide animate-pulse">Updating...</p>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    );
+};

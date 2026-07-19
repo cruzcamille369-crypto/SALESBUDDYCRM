@@ -1,0 +1,15 @@
+{
+  "name": "Chizwiz -version 4",
+  "description": "A high-performance, cloud-synced CRM dashboard for sales agents and administrators featuring real-time analytics, pipeline tracking, and role-based access control.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation",
+    "display-capture",
+    "clipboard-read",
+    "clipboard-write"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

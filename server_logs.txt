@@ -1,0 +1,6 @@
+
+> braveheart-crm-os@0.0.0 dev
+> tsx server.ts
+
+[Database Permissions] Query deferred or executed by non-owner: must be owner of table crm_documents
+[DB Boot Warning] Index setup deferred: must be owner of table crm_documents

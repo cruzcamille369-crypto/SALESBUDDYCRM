@@ -1,0 +1,16 @@
+{
+  "short_name": "BraveheartCRM",
+  "name": "Braveheart CRM OS | Titanium",
+  "icons": [
+    {
+      "src": "/public/logo.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#F8FAFC",
+  "theme_color": "#6366f1",
+  "display": "standalone",
+  "orientation": "portrait-primary"
+}

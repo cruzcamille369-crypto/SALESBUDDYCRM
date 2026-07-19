@@ -1,0 +1,184 @@
+import React from 'react';
+import { User, MapPin, Phone, Mail, Calendar, CheckCircle, Globe, Sparkles } from 'lucide-react';
+import { Card } from '../../ui/Base';
+import { FormLabel, FormInput } from './shared/FormComponents';
+
+interface ClientProfileSectionProps {
+    formData: any;
+    handleIdentityChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    handleAgeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    handleDobChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    useShippingForBilling: boolean;
+    setUseShippingForBilling: (val: boolean) => void;
+    customerTime: string | null;
+    onPasteParse?: () => void;
+}
+
+export const ClientProfileSection: React.FC<ClientProfileSectionProps> = ({
+    formData, handleIdentityChange, handleAgeChange, handleDobChange,
+    useShippingForBilling, setUseShippingForBilling, customerTime, onPasteParse
+}) => {
+    const handleAddressBlur = (e: React.FocusEvent<HTMLTextAreaElement>) => {
+        const text = e.target.value.replace(/\r?\n/g, ', ').replace(/\s+/g, ' ').trim();
+        if (!text) return;
+
+        const toTitleCase = (str: string) => str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+        
+        let street = text;
+        let city = '';
+        let state = '';
+        let zip = '';
+
+        const parts = text.split(',').map(s => s.trim()).filter(Boolean);
+        if (parts.length >= 2) {
+            street = toTitleCase(parts[0]);
+            if (parts.length >= 3) {
+                 city = toTitleCase(parts[1]);
+                 const stateZip = parts[2].split(' ');
+                 if (stateZip.length >= 2) {
+                     zip = stateZip.pop() || '';
+                     state = stateZip.join(' ').toUpperCase();
+                 } else {
+                     state = stateZip[0].toUpperCase();
+                 }
+            } else {
+                 const stateZip = parts[1].split(' ');
+                 if (stateZip.length >= 3) {
+                     city = toTitleCase(stateZip.slice(0, -2).join(' '));
+                     zip = stateZip.pop() || '';
+                     state = stateZip.pop()?.toUpperCase() || '';
+                 } else if (stateZip.length >= 2) {
+                     zip = stateZip.pop() || '';
+                     state = stateZip.join(' ').toUpperCase();
+                 }
+            }
+        } else {
+            const words = text.split(' ');
+            if (words.length >= 4) {
+               zip = words.pop() || '';
+               state = (words.pop() || '').toUpperCase();
+               city = toTitleCase(words.pop() || '');
+               street = toTitleCase(words.join(' '));
+            } else {
+               street = toTitleCase(text);
+            }
+        }
+        
+        const formatAddr = [street, city, state ? state : null, zip ? zip : null].filter(Boolean).join(', ');
+
+        handleIdentityChange({ target: { name: e.target.name, value: formatAddr } } as any);
+        if (e.target.name === 'shippingAddress') {
+             handleIdentityChange({ target: { name: 'shippingCity', value: city } } as any);
+             handleIdentityChange({ target: { name: 'shippingState', value: state } } as any);
+             handleIdentityChange({ target: { name: 'shippingZip', value: zip } } as any);
+        }
+    };
+
+    return (
+        <div className="flex gap-4 flex-1 min-h-0">
+            {/* IDENTITY COLUMN */}
+            <Card variant="refraction" className="flex-1 p-0 flex flex-col overflow-hidden relative group">
+                <div className="p-2 border-b border-border-subtle flex items-center justify-between bg-surface-alt/20 shrink-0">
+                    <div className="flex items-center gap-1.5">
+                        <div className="p-1 bg-indigo-600/10 rounded-md text-indigo-600">
+                            <User size={16} />
+                        </div>
+                        <h3 className="text-sm font-medium  text-text-primary tracking-wide">Client Identity</h3>
+                    </div>
+                    {onPasteParse && (
+                        <button onClick={onPasteParse} className="text-sm font-bold text-indigo-600 hover:bg-indigo-600/10 px-3 py-1.5 rounded transition-all flex items-center gap-1 border border-transparent hover:border-indigo-600/20">
+                            <Sparkles size={16} /> AUTO-PARSE
+                        </button>
+                    )}
+                </div>
+                
+                <div className="flex-1 overflow-y-auto custom-scrollbar p-2 space-y-2">
+                    <div className="grid grid-cols-2 gap-2">
+                        <div>
+                            <FormLabel icon={User}>First Name</FormLabel>
+                            <FormInput name="firstName" value={formData.firstName || ''} onChange={handleIdentityChange} placeholder="First" className="font-bold h-7 text-sm" />
+                        </div>
+                        <div>
+                            <FormLabel icon={User} className="invisible">Last Name</FormLabel>
+                            <FormInput name="lastName" value={formData.lastName || ''} onChange={handleIdentityChange} placeholder="Last" className="font-bold h-7 text-sm" />
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                        <div>
+                            <FormLabel icon={Phone}>Direct Line</FormLabel>
+                            <FormInput name="phone" value={formData.phone} onChange={handleIdentityChange} placeholder="(555) 000-0000" className="font-mono tracking-wide h-7 text-sm" />
+                        </div>
+                        <div>
+                            <FormLabel icon={Mail}>Email Uplink</FormLabel>
+                            <FormInput name="email" value={formData.email} onChange={handleIdentityChange} placeholder="client@email.com" className="h-7 text-sm" />
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-4 gap-2 p-2 bg-surface-alt/30 rounded-lg border border-border-subtle/50">
+                        <div><FormLabel icon={Calendar}>DOB</FormLabel><FormInput type="date" name="dob" value={formData.dob} onChange={handleDobChange} className="text-sm h-7 px-1" /></div>
+                        <div><FormLabel icon={User}>Age</FormLabel><FormInput name="age" value={formData.age} onChange={handleAgeChange} className="text-center font-mono h-7 text-sm" placeholder="00" /></div>
+                        <div><FormLabel>Height</FormLabel><FormInput name="height" value={formData.height} onChange={handleIdentityChange} placeholder="e.g. 5'10" className="h-7 text-sm" /></div>
+                        <div><FormLabel>Weight</FormLabel><FormInput name="weight" value={formData.weight} onChange={handleIdentityChange} placeholder="e.g. 180" className="h-7 text-sm" /></div>
+                    </div>
+                </div>
+            </Card>
+
+            {/* LOGISTICS COLUMN */}
+            <Card variant="refraction" className="flex-1 p-0 flex flex-col overflow-hidden">
+                <div className="p-2 border-b border-border-subtle flex items-center justify-between bg-surface-alt/20 shrink-0">
+                    <div className="flex items-center gap-1.5">
+                        <div className="p-1 bg-sky-500/10 rounded-md text-sky-500">
+                            <MapPin size={16} />
+                        </div>
+                        <h3 className="text-sm font-medium  text-text-primary tracking-wide">Logistics</h3>
+                    </div>
+                    {customerTime && (
+                        <span className="text-sm font-mono text-text-muted bg-surface-alt px-3 py-1.5 rounded border border-border-subtle flex items-center gap-1">
+                            <Globe size={16}/> {customerTime}
+                        </span>
+                    )}
+                </div>
+
+                <div className="flex-1 overflow-y-auto custom-scrollbar p-2 space-y-2">
+                    <div>
+                        <FormLabel>Shipping Manifest</FormLabel>
+                        <textarea 
+                            name="shippingAddress" 
+                            value={formData.shippingAddress} 
+                            onChange={handleIdentityChange as any} 
+                            onBlur={handleAddressBlur}
+                            placeholder="Street, City, State ZIP" 
+                            className="w-full h-14 bg-surface-alt/40 border border-border-subtle rounded-lg p-2 text-sm font-medium text-text-primary outline-none focus:border-indigo-600 focus:bg-surface-main transition-all resize-none shadow-inner leading-tight"
+                        />
+                    </div>
+
+                    <div className="space-y-2">
+                        <button 
+                            onClick={() => setUseShippingForBilling(!useShippingForBilling)} 
+                            className={`w-full py-1.5 px-2 rounded-lg border flex items-center justify-between transition-all ${useShippingForBilling ? 'bg-emerald-500/5 border-emerald-500/20 text-emerald-600' : 'bg-surface-alt border-border-subtle text-text-muted hover:border-text-muted'}`}
+                        >
+                            <span className="text-sm font-medium  tracking-wide flex items-center gap-2">
+                                {useShippingForBilling ? <CheckCircle size={16}/> : <div className="w-2.5 h-2.5 rounded-full border border-current"></div>}
+                                Billing Matches Shipping
+                            </span>
+                        </button>
+
+                        {!useShippingForBilling && (
+                            <div className="animate-in slide-in-from-top-2 fade-in">
+                                <FormLabel>Billing Address</FormLabel>
+                                <textarea 
+                                    name="billingAddress" 
+                                    value={formData.billingAddress} 
+                                    onChange={handleIdentityChange as any} 
+                                    onBlur={handleAddressBlur}
+                                    placeholder="Billing Address..." 
+                                    className="w-full h-12 bg-surface-alt/40 border border-border-subtle rounded-lg p-2 text-sm font-medium text-text-primary outline-none focus:border-indigo-600 focus:bg-surface-main transition-all resize-none shadow-inner leading-tight"
+                                />
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </Card>
+        </div>
+    );
+};

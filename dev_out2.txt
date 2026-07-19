@@ -1,0 +1,280 @@
+
+> braveheart-crm-os@0.0.0 dev
+> tsx server.ts
+
+DATABASE_URL is not set. Database operations will fail if called.
+Forced re-optimization of dependencies
+[Realtime] WebSocket Hub initialized with 15s High-Frequency Heartbeats.
+Server running on http://localhost:3000
+
+warn - The class `duration-[10s]` is ambiguous and matches multiple utilities.
+warn - If this is content and not a class, replace it with `duration-&lsqb;10s&rsqb;` to silence this warning.
+
+warn - The class `ease-[cubic-bezier(0.16,1,0.3,1)]` is ambiguous and matches multiple utilities.
+warn - If this is content and not a class, replace it with `ease-&lsqb;cubic-bezier(0.16,1,0.3,1)&rsqb;` to silence this warning.
+
+warn - The class `ease-[cubic-bezier(0.25,1,0.5,1)]` is ambiguous and matches multiple utilities.
+warn - If this is content and not a class, replace it with `ease-&lsqb;cubic-bezier(0.25,1,0.5,1)&rsqb;` to silence this warning.
+[Realtime] Client connected: nq0kh
+[Realtime] Client disconnected: nq0kh (unregistered)
+[Realtime] Client connected: gy7w75
+[Realtime] Client disconnected: gy7w75 (unregistered)
+[Realtime] Client connected: 64vb
+1:02:47 PM [vite] page reload body.html
+[Realtime] Client disconnected: 64vb (unregistered)
+[Realtime] Client connected: zkke4s
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[System Integrity Check] Initialized default memory systemConfig for tenant srv-001
+[Incentive System Migration] Migrated/Initialized default memory incentiveSettings for tenant srv-001
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zkke4s registered to User ID sys_root (admin)
+[Realtime] Client disconnected: zkke4s (sys_root)
+[Realtime] Client connected: 7wh68a
+[Realtime] Client disconnected: 7wh68a (unregistered)
+[Realtime] Client connected: 9ulq1g
+2:19:40 PM [vite] page reload body.html
+[Realtime] Client disconnected: 9ulq1g (unregistered)
+2:20:26 PM [vite] hmr update /App.tsx
+2:20:32 PM [vite] page reload index.html
+[Realtime] Client connected: fg4dgnm
+[Realtime] Client disconnected: fg4dgnm (unregistered)
+[Realtime] Client connected: 0vcag
+[Realtime] Client disconnected: 0vcag (unregistered)
+[Realtime] Client connected: iwk6zk
+[Realtime] Security Binding established: Client ID iwk6zk registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID iwk6zk registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID iwk6zk registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID iwk6zk registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID iwk6zk registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID iwk6zk registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID iwk6zk registered to User ID sys_root (admin)
+[Realtime] Client disconnected: iwk6zk (sys_root)
+[Realtime] Client connected: 0iaw1
+[Realtime] Security Binding established: Client ID 0iaw1 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID 0iaw1 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID 0iaw1 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID 0iaw1 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID 0iaw1 registered to User ID sys_root (admin)
+[Realtime] Client disconnected: 0iaw1 (sys_root)
+[Realtime] Client connected: 6gg9vl
+[Realtime] Security Binding established: Client ID 6gg9vl registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID 6gg9vl registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID 6gg9vl registered to User ID sys_root (admin)
+[Realtime] Client connected: kdne4o
+[Realtime] Client disconnected: 6gg9vl (sys_root)
+[Realtime] Security Binding established: Client ID kdne4o registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID kdne4o registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID kdne4o registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID kdne4o registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID kdne4o registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID kdne4o registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID kdne4o registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID kdne4o registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID kdne4o registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID kdne4o registered to User ID sys_root (admin)
+[Realtime] Client connected: x0ibjk
+[Realtime] Client disconnected: x0ibjk (unregistered)
+[Realtime] Client connected: jwowbp
+[Realtime] Client disconnected: jwowbp (unregistered)
+[Realtime] Security Binding established: Client ID kdne4o registered to User ID sys_root (admin)
+[Realtime] Client connected: spqk515
+[Realtime] Client disconnected: kdne4o (sys_root)
+[Realtime] Security Binding established: Client ID spqk515 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID spqk515 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID spqk515 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID spqk515 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID spqk515 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID spqk515 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID spqk515 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID spqk515 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID spqk515 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID spqk515 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID spqk515 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID spqk515 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID spqk515 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID spqk515 registered to User ID sys_root (admin)
+[Realtime] Client disconnected: spqk515 (sys_root)
+[Realtime] Client connected: g6ohx
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g6ohx registered to User ID sys_root (admin)
+[Realtime] Client disconnected: g6ohx (sys_root)
+[Realtime] Client connected: mcq9mo
+[Realtime] Client connected: psck5
+[Realtime] Client disconnected: psck5 (unregistered)
+[Realtime] Client connected: zyvdx3
+[Realtime] Client disconnected: mcq9mo (unregistered)
+[Realtime] Security Binding established: Client ID zyvdx3 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zyvdx3 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zyvdx3 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zyvdx3 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zyvdx3 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zyvdx3 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zyvdx3 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zyvdx3 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zyvdx3 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zyvdx3 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zyvdx3 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zyvdx3 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zyvdx3 registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID zyvdx3 registered to User ID sys_root (admin)
+[Realtime] Client disconnected: zyvdx3 (sys_root)
+[Realtime] Client connected: m72ns
+[Realtime] Security Binding established: Client ID m72ns registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID m72ns registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID m72ns registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID m72ns registered to User ID sys_root (admin)
+[Realtime] Client disconnected: m72ns (sys_root)
+[Realtime] Client connected: p9mw1t
+[Realtime] Security Binding established: Client ID p9mw1t registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID p9mw1t registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID p9mw1t registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID p9mw1t registered to User ID sys_root (admin)
+[Realtime] Client connected: c3tm0w
+[Realtime] Client disconnected: p9mw1t (sys_root)
+[Realtime] Security Binding established: Client ID c3tm0w registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID c3tm0w registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID c3tm0w registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID c3tm0w registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID c3tm0w registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID c3tm0w registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID c3tm0w registered to User ID sys_root (admin)
+7:05:15 PM [vite] hmr update /components/app/MainContent.tsx, /src/index.css
+[Realtime] Client connected: 6gf288
+[Realtime] Client disconnected: 6gf288 (unregistered)
+[Realtime] Client connected: fcnpc
+[Realtime] Client disconnected: fcnpc (unregistered)
+[Realtime] Client connected: 324oefm
+[Realtime] Client disconnected: 324oefm (unregistered)
+7:07:28 PM [vite] hmr update /context/providers/AgentPerformanceProvider.tsx
+[Realtime] Security Binding established: Client ID c3tm0w registered to User ID sys_root (admin)
+7:10:47 PM [vite] hmr update /context/providers/AgentPerformanceProvider.tsx
+7:12:32 PM [vite] hmr update /components/app/MainContent.tsx, /src/index.css
+[Realtime] Security Binding established: Client ID c3tm0w registered to User ID sys_root (admin)
+7:15:25 PM [vite] hmr update /components/leads/LeadDetail.tsx, /src/index.css
+7:15:36 PM [vite] hmr update /components/leads/LeadDetail.tsx, /src/index.css
+7:15:46 PM [vite] hmr update /components/leads/LeadDetail.tsx, /src/index.css
+7:16:07 PM [vite] hmr update /components/leads/LeadDetail.tsx, /src/index.css
+7:16:17 PM [vite] hmr update /context/CRMContext.tsx, /components/admin/UniqueSalesPool.tsx, /src/index.css, /components/admin/unique-sales-pool/AddCustomerModal.tsx, /components/admin/unique-sales-pool/EditCustomerModal.tsx
+7:16:27 PM [vite] hmr update /context/CRMContext.tsx, /components/admin/UniqueSalesPool.tsx, /src/index.css, /components/admin/unique-sales-pool/AddCustomerModal.tsx, /components/admin/unique-sales-pool/EditCustomerModal.tsx
+7:16:40 PM [vite] hmr update /components/app/MainContent.tsx, /src/index.css
+7:16:52 PM [vite] hmr update /context/CRMContext.tsx, /context/AuthContext.tsx, /context/SystemContext.tsx, /components/admin/UniqueSalesPool.tsx, /src/index.css, /components/admin/unique-sales-pool/AddCustomerModal.tsx, /components/admin/unique-sales-pool/EditCustomerModal.tsx, /components/app/MainContent.tsx, /components/auth/ServerGateway.tsx, /components/app/GlobalWorkers.tsx, /views/AgentPortal.tsx, /components/admin/CRMAuditDashboard.tsx, /components/widgets/sales-ledger/ImportWizard.tsx, /components/forms/EnrollmentFormV2.tsx, /components/chat/MessagingLayout.tsx, /components/chat/ChatList.tsx
+7:17:09 PM [vite] hmr update /context/CRMContext.tsx, /context/AuthContext.tsx, /context/SystemContext.tsx, /components/admin/UniqueSalesPool.tsx, /src/index.css, /components/admin/unique-sales-pool/AddCustomerModal.tsx, /components/admin/unique-sales-pool/EditCustomerModal.tsx, /components/app/MainContent.tsx, /components/auth/ServerGateway.tsx, /components/app/GlobalWorkers.tsx, /views/AgentPortal.tsx, /components/admin/CRMAuditDashboard.tsx, /components/widgets/sales-ledger/ImportWizard.tsx, /components/forms/EnrollmentFormV2.tsx, /components/chat/MessagingLayout.tsx, /components/chat/ChatList.tsx
+7:17:22 PM [vite] hmr update /src/index.css, /components/forms/EnrollmentFormV2.tsx
+7:17:32 PM [vite] hmr update /src/index.css, /components/forms/EnrollmentFormV2.tsx
+7:18:15 PM [vite] hmr update /context/CRMPerformanceContext.tsx
+7:18:15 PM [vite] hmr update /context/CRMContext.tsx, /components/admin/UniqueSalesPool.tsx, /src/index.css, /components/admin/unique-sales-pool/AddCustomerModal.tsx, /components/admin/unique-sales-pool/EditCustomerModal.tsx
+7:18:15 PM [vite] hmr update /context/AuthContext.tsx
+7:18:34 PM [vite] hmr update /context/CRMContext.tsx, /components/admin/UniqueSalesPool.tsx, /src/index.css, /components/admin/unique-sales-pool/AddCustomerModal.tsx, /components/admin/unique-sales-pool/EditCustomerModal.tsx
+[Realtime] Security Binding established: Client ID c3tm0w registered to User ID sys_root (admin)
+7:18:44 PM [vite] hmr update /context/AuthContext.tsx
+7:18:54 PM [vite] hmr update /context/CRMPerformanceContext.tsx
+7:19:13 PM [vite] hmr update /context/AuthContext.tsx
+7:19:32 PM [vite] hmr update /context/AuthContext.tsx
+7:19:44 PM [vite] hmr update /context/AuthContext.tsx
+7:19:56 PM [vite] hmr update /context/AuthContext.tsx
+7:20:17 PM [vite] hmr update /context/AuthContext.tsx
+7:20:38 PM [vite] hmr update /context/AuthContext.tsx
+7:20:58 PM [vite] hmr update /context/AuthContext.tsx
+7:21:19 PM [vite] hmr update /context/AuthContext.tsx
+7:21:40 PM [vite] hmr update /context/CRMContext.tsx, /components/admin/UniqueSalesPool.tsx, /src/index.css, /components/admin/unique-sales-pool/AddCustomerModal.tsx, /components/admin/unique-sales-pool/EditCustomerModal.tsx
+7:21:49 PM [vite] hmr update /context/CRMContext.tsx, /components/admin/UniqueSalesPool.tsx, /src/index.css, /components/admin/unique-sales-pool/AddCustomerModal.tsx, /components/admin/unique-sales-pool/EditCustomerModal.tsx
+7:22:09 PM [vite] hmr update /context/CRMContext.tsx, /components/admin/UniqueSalesPool.tsx, /src/index.css, /components/admin/unique-sales-pool/AddCustomerModal.tsx, /components/admin/unique-sales-pool/EditCustomerModal.tsx
+7:22:46 PM [vite] hmr update /context/CRMContext.tsx, /components/admin/UniqueSalesPool.tsx, /src/index.css, /components/admin/unique-sales-pool/AddCustomerModal.tsx, /components/admin/unique-sales-pool/EditCustomerModal.tsx
+7:23:06 PM [vite] hmr update /context/CRMContext.tsx, /components/admin/UniqueSalesPool.tsx, /src/index.css, /components/admin/unique-sales-pool/AddCustomerModal.tsx, /components/admin/unique-sales-pool/EditCustomerModal.tsx
+7:23:33 PM [vite] hmr update /context/CRMContext.tsx, /components/admin/UniqueSalesPool.tsx, /src/index.css, /components/admin/unique-sales-pool/AddCustomerModal.tsx, /components/admin/unique-sales-pool/EditCustomerModal.tsx
+[Realtime] Security Binding established: Client ID c3tm0w registered to User ID sys_root (admin)
+7:24:08 PM [vite] hmr update /context/CRMContext.tsx, /components/admin/UniqueSalesPool.tsx, /src/index.css, /components/admin/unique-sales-pool/AddCustomerModal.tsx, /components/admin/unique-sales-pool/EditCustomerModal.tsx
+7:24:29 PM [vite] hmr update /context/CRMContext.tsx, /components/admin/UniqueSalesPool.tsx, /src/index.css, /components/admin/unique-sales-pool/AddCustomerModal.tsx, /components/admin/unique-sales-pool/EditCustomerModal.tsx
+[Realtime] Client connected: g8ls5b
+[Realtime] Client disconnected: c3tm0w (sys_root)
+[Realtime] Security Binding established: Client ID g8ls5b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g8ls5b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g8ls5b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g8ls5b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g8ls5b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g8ls5b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g8ls5b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g8ls5b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g8ls5b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g8ls5b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g8ls5b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g8ls5b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID g8ls5b registered to User ID sys_root (admin)
+[Realtime] Client disconnected: g8ls5b (sys_root)
+[Realtime] Client connected: hyns9b
+[Realtime] Security Binding established: Client ID hyns9b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID hyns9b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID hyns9b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID hyns9b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID hyns9b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID hyns9b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID hyns9b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID hyns9b registered to User ID sys_root (admin)
+[Realtime] Security Binding established: Client ID hyns9b registered to User ID sys_root (admin)
+9:06:33 PM [vite] hmr update /context/CRMContext.tsx, /context/AuthContext.tsx, /context/SystemContext.tsx, /components/admin/UniqueSalesPool.tsx, /src/index.css, /components/admin/unique-sales-pool/AddCustomerModal.tsx, /components/admin/unique-sales-pool/EditCustomerModal.tsx, /components/app/MainContent.tsx, /components/auth/ServerGateway.tsx, /components/app/GlobalWorkers.tsx, /views/AgentPortal.tsx, /components/admin/CRMAuditDashboard.tsx, /components/widgets/sales-ledger/ImportWizard.tsx, /components/forms/EnrollmentFormV2.tsx, /components/chat/MessagingLayout.tsx, /components/chat/ChatList.tsx
